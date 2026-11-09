@@ -1,0 +1,381 @@
+    1  mkdir -p ~/devops/week1
+    2  cd ~/devops/week1
+    3  pwd
+    4  cd
+    5  pwd
+    6  cd ~/devops/week1
+    7  pwd
+    8  echo 'echo "Hello devops week1"' > hellow.sh
+    9  ls
+   10  chmod +x hellow.sh
+   11  ./hellow.sh
+   12  git log --oneline
+   13  git status
+   14  cd ~/devops/week1
+   15  ls -la
+   16  git config --global user.name "Jorah Adewuyi"
+   17  git config --global user.email "jorahadewuyi0907@gmail.com"
+   18  git init
+   19  git branch -M main
+   20  git add hellow.sh
+   21  git branch -M main
+   22  git add hellow.sh
+   23  git commit -m "Add hellow script for devops week1"
+   24  git log --oneline
+   25  git remote add origin https://github.com/Jorah09/devopsWeek1.git
+   26  git remote -v
+   27  git push -u origin main
+   28  sed -i 's/Hello devops week1/Hello DEVOPS week1/' hellow.sh
+   29  git add hellow.sh
+   30  git commit -m "Change greeting to Hello DEVOPS week1"
+   31  git push
+   32  cd ~
+   33  ls
+   34  cd ~/devops
+   35  mkdir week2
+   36  cd week2
+   37  cd ~/devops
+   38  ls -la
+   39  cd ~/devops/week1
+   40  ls -la
+   41  ls -la ~/.ssh
+   42  ssh-keygen -t ed25519 -C "jorahadewuyi0907@gmail.com"
+   43  cat ~/.ssh/id_ed25519.pub
+   44  ssh -T git@github.com
+   45  git remote -v
+   46  git remote set-url origin git@github.com:Jorah09/devopsWeek1.git
+   47  git remote -v
+   48  git fetch
+   49  cd ~/devops/week2
+   50  git clone git@github.com:Jorah09/devopsWeek1.git
+   51  cd devopsWeek1
+   52  ls
+   53  git log --oneline
+   54  nano hellow.sh
+   55  cat hellow.sh
+   56  git add hellow.sh
+   57  git commit -m "Version 3 - Hello DEVOPS, Nice to be here"
+   58  git push
+   59  git log --oneline
+   60  git tag v1.0 0e3116c
+   61  git tag v2.0 0afab8f
+   62  git tag v3.0 0440164
+   63  git tag
+   64  git push origin --tags
+   65  cd ~/devops/week2/devopsWeek1
+   66  git push origin --tags
+   67  cd ~/devops
+   68  mkdir -p week2tag
+   69  cd week2tag
+   70  git clone git@github.com:Jorah09/devopsWeek1.gitv
+   71  git clone git@github.com:Jorah09/devopsWeek1.git
+   72  cd devopsWeek1
+   73  git fetch --tags
+   74  git tag
+   75  git checkout -b tag-test v1.0
+   76  git branch
+   77  git log --oneline
+   78  nano hellow.sh
+   79  cat hellow.sh
+   80  nano hellow.sh
+   81  git add hellow.sh
+   82  git commit -m "tag test - updated hello from v1"
+   83  git push -u origin tag-test
+   84  git checkout main
+   85  git pull origin main
+   86  git branch -a
+   87  ls
+   88  ls -la
+   89  cd devops-week1
+   90  cd devopsweek1
+   91  cd devopsWeek1
+   92  cd devops
+   93  ls -la
+   94  cd ~/devops/week1
+   95  ls -la
+   96  git status
+   97  git branch -a
+   98  git remote -v
+   99  git checkout -b CR101
+  100  cat cr101.sh
+  101  echo 'echo "This is cr101"' > cr101.sh
+  102  cat cr101.sh
+  103  chmod +x cr101.sh
+  104  git add cr101.sh
+  105  git status
+  106  git commit -m "Add cr101 file for CR101"
+  107  git push -u origin CR101
+  108  git checkout main
+  109  git checkout -b CR102
+  110  echo 'echo "This is cr102"' > cr102.sh
+  111  cat cr102.sh
+  112  chmod +x cr102.sh
+  113  git add cr102.sh
+  114  git commit -m "Add cr102 file for CR102"
+  115  git push -u origin CR102
+  116  git branch -a
+  117  git checkout main
+  118  git pull origin main
+  119  ls
+  120  git branch -a
+  121  git log --oneline --all --graph --decorate
+  122  git merge CR102 -m "Merge CR102 into main"
+  123  git push origin main
+  124  git push origin --delete CR102
+  125  git push origin --delete CR101
+  126  git branch -d CR102
+  127  git branch -d CR101
+  128  git branch -a
+  129  git fetch --prune
+  130  git branch -a
+  131  ls
+  132  cat cr101.sh
+  133  cat cr102.sh
+  134  ls -la ~/.ssh
+  135  git clone https://github.com/Jorah09/devsopsProj.git
+  136  cd devsopsProj
+  137  ls -la
+  138  nano count1.sh
+  139  nano count2.sh
+  140  nano count3.sh
+  141  nano count4.sh
+  142  nano count5.sh
+  143  nano count6.sh
+  144  nano count7.sh
+  145  nano count8.sh
+  146  nano count9.sh
+  147  nano count10.sh
+  148  chmod +x count*.sh
+  149  ls count*.sh
+  150  bash count1.sh
+  151  git add .
+  152  git commit -m "Add count scripts for EPIC #1"
+  153  git push origin main
+  154  git branch
+  155  git log --oneline
+  156  git remote -v
+  157  git remote set-url origin https://github.com/Jorah09/devsopsProj.git
+  158  git remote -v
+  159  git status
+  160  git add .
+  161  git commit -m "Add count scripts for EPIC #1"
+  162  git branch -M main
+  163  git branch
+  164  git push -u origin main
+  165  Jorah09
+  166  Pizzagirl321@
+  167  git push -u origin main
+  168  gh auth login
+  169  git branch
+  170  git log --oneline
+  171  git remote -v
+  172  git status
+  173  nano count10.sh
+  174  git add count10.sh
+  175  git commit -m "fix count10 - change echo 10 to TEN
+  176  Fixes #12
+  177  git push origin main
+  178  git commit -m "fix count10 - change echo 10 to TEN
+  179  Fixes #12"
+  180  git push origin main
+  181  git pull origin main
+  182  git push origin main
+  183  git config pull.rebase false
+  184  git pull origin main
+  185  git pull origin main --allow-unrelated-histories
+  186  git push origin main
+  187  git config pull.rebase false
+  188  git pull origin main
+  189  git push origin main
+  190  ls -la ~/.ssh
+  191  cat ~/.ssh/id_ed25519.pub
+  192  cd ~
+  193  mkdir -p v1
+  194  cd v1
+  195  git clone https://github.com/Jorah09/devsopsProj.git
+  196  cd devsopsProj
+  197  git checkout -b ONE-V1
+  198  cd ~
+  199  mkdir -p v2
+  200  cd v2
+  201  git clone https://github.com/Jorah09/devsopsProj.git
+  202  cd devsopsProj
+  203  git checkout -b ONE-V2
+  204  cd ~/v1/devsopsProj
+  205  nano count1.sh
+  206  git add count1.sh
+  207  git commit -m "change count1 to echo ONE(1)
+  208  Part of #13"
+  209  git push -u origin ONE-V1
+  210  cd ~/v2/devsopsProj
+  211  nano count1.sh
+  212  git add count1.sh
+  213  git commit -m "change count1 to echo 1(ONE)
+  214  Part of #14"
+  215  git push -u origin ONE-V2
+  216  cd ~
+  217  mkdir -p mergeTest
+  218  cd mergeTest
+  219  git clone https://github.com/Jorah09/devsopsProj.git
+  220  cd devsopsProj
+  221  git fetch origin
+  222  git merge origin/ONE-V1 -m "merge ONE-V1 into main"
+  223  cat count1.sh
+  224  git push origin main
+  225  git merge origin/ONE-V2 -m "merge ONE-V2 into main"
+  226  cat count1.sh
+  227  nano count1.sh
+  228  git add count1.sh
+  229  git commit -m "resolve conflict: keep ONE(1) from ONE-V1"
+  230  git push origin main
+  231  cat count1.sh
+  232  cd ~
+  233  mkdir -p v1-2
+  234  cd v1-2
+  235  git clone https://github.com/Jorah09/devsopsProj.git
+  236  cd devsopsProj
+  237  git checkout -b TWO-V1
+  238  cd ~
+  239  mkdir -p v2-2
+  240  cd v2-2
+  241  git clone https://github.com/Jorah09/devsopsProj.git
+  242  cd devsopsProj
+  243  git checkout -b TWO-V2
+  244  cd ~/v1-2/devsopsProj
+  245  nano count2.sh
+  246  git add count2.sh
+  247  git commit -m "change count2 to echo TWO(2)
+  248  nano count2.sh
+  249  git add count2.sh
+  250  git commit -m "change count2 to echo TWO(2)
+  251  Part of #15"
+  252  git push -u origin TWO-V1
+  253  cd ~/v2-2/devsopsProj
+  254  nano count2.sh
+  255  git add count2.sh
+  256  git commit -m "change count2 to echo 2(TWO)
+  257  git add count2.sh
+  258  git commit -m "change count2 to echo 2(TWO)
+  259  Part of #16"
+  260  git push -u origin TWO-V2
+  261  cd ~
+  262  git clone git@github.com:pearse1104/X00223826.git
+  263  cd X00223826
+  264  echo "Hello from Jorah" > hello.txt
+  265  git add hello.txt
+  266  git commit -m "Add hello.txt test file"
+  267  git push origin main
+  268  cd ~
+  269  gh auth login
+  270  gh auth status
+  271  cd ~
+  272  mkdir -p lab6-work
+  273  cd lab6-work
+  274  nano q1.sh
+  275  chmod +x q1.sh
+  276  ./q1.sh
+  277  gh repo view Jorah09/lab6 --json name,visibility
+  278  nano q2.sh
+  279  chmod +x q2.sh
+  280  ./q2.sh
+  281  nano q3.sh
+  282  chmod +x q3.sh
+  283  ./q3.sh
+  284  cd ~
+  285  rm -rf collab-push-test
+  286  mkdir collab-push-test
+  287  cd collab-push-test
+  288  cd ~/lab6-work
+  289  nano q4.sh
+  290  chmod +x q4.sh
+  291  ./q4.sh
+  292  nano q5.sh
+  293  chmod +x q5.sh
+  294  ./q5.sh
+  295  cd ~/lab6-work
+  296  git clone git@github.com:Jorah09/lab6.git
+  297  cd lab6
+  298  git checkout -b Q12345
+  299  cp ../q1.sh ../q2.sh ../q3.sh ../q4.sh ../q5.sh .
+  300  ls
+  301  git add q1.sh q2.sh q3.sh q4.sh q5.sh
+  302  git commit -m "Add scripts for Q1-Q5"
+  303  git push -u origin Q12345
+  304  nano q7.sh
+  305  chmod +x q7.sh
+  306  ./q7.sh
+  307  nano q8.sh
+  308  chmod +x q8.sh
+  309  ./q8.sh
+  310  git checkout main
+  311  git pull origin main
+  312  cp ../q7.sh ../q8.sh .
+  313  git checkout Q12345
+  314  ls
+  315  mv q7.sh q8.sh ..
+  316  git checkout main
+  317  git pull origin main
+  318  git add q7.sh q8.sh
+  319  git commit -m "Add Q7 and Q8 scripts directly to main"
+  320  git push origin main
+  321  git branch
+  322  ls
+  323  git checkout Q12345
+  324  ls
+  325  cd ~
+  326  git clone https://github.com/pearse1104/CA1-MONDAY.git
+  327  cd CA1-MONDAY
+  328  bash runme.sh
+  329  cd CA1-MONDAY
+  330  git pull origin main
+  331  bash runme.sh
+  332  git pull origin main
+  333  ls la
+  334  ls
+  335  bash runme.sh
+  336  mv runme.txt runme.sh
+  337  bash runme.sh
+  338  gh repo create devopsCA1 --public
+  339  ls
+  340  git remote set-url origin https://github.com/Jorah09/devopsCA1.git
+  341  git add runme.sh me.txt
+  342  git commit -m "Push Q1 files"
+  343  git push - u origin main
+  344  git push -u origin main
+  345  cd ~
+  346  git clone https://github.com/pearse1104/X00223826.git
+  347  cd CA1-MONDAY
+  348  cd X00223826
+  349  history > history.txt
+  350  cd ~
+  351  mkdir -p lab9-work
+  352  cd lab9-work
+  353  gh repo create lab9 --public
+  354  git clone https://github.com/Jorah09/lab9.git
+  355  cd lab9
+  356  gh label create EPIC --color FF5733
+  357  gh issue create --title "do lab9" --label "EPIC" --body "Tracking issue for lab9"
+  358  gh issue create --title "create validate-data script" --label "enhancement" --assignee "@me" --body "Create validate-data.sh scrip
+t
+  359  gh issue create --title "create validate-data script" --label "enhancement" --assignee "@me" --body "Create validate-data.sh script"
+  360  nano validate-data.sh
+  361  chmod +x validate-data.sh
+  362  ./validate-data.sh "pearse mccarthy" "0831122334"
+  363  ./validate-data.sh "this name is way too long" "0831122334"
+  364  mkdir -p .github/workflows
+  365  nano .github/workflows/basictests.yml
+  366  git add .
+  367  git commit -m "Add validate script and github action
+Fixes #2"
+  368  git push origin main
+  369  gh issue create --title "Create project view" --label "enhancement" --assignee "@me"
+  370  git checkout -b test
+  371  sed -i 's/-le 15/-le 20/' validate-data.sh
+  372  git add validate-data.sh
+  373  git commit -m "Change max name length to 20"
+  374  git push -u origin test
+  375  nano .github/workflows/basictests.yml
+  376  git add .github/workflows/basictests.yml
+  377  git commit -m "Update yaml to run on test branch"
+  378  git push origin test
+  379  history > history.txt
